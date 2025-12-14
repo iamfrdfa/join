@@ -1,0 +1,377 @@
+@media (max-width: 1530px) {
+    /*##### board.html (addTask-Overlay) #####*/
+    .addTaskWrapperLeft {
+        margin-right: 24px;
+    }
+
+    .addTaskWrapperRight {
+        margin-left: 24px;
+    }
+
+    #title,
+    textarea,
+    #selectContacts,
+    #selectInputAssignee,
+    #datePicker,
+    #categorySelect,
+    #subtaskStorage,
+    .addTaskEnterSubtask {
+        width: 395px;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 16px !important;
+        padding-right: 10px !important;
+    }
+
+    #subtasks {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 16px !important;
+    }
+
+    #selectContacts {
+        padding-right: 0 !important;
+    }
+
+    #subtaskStorage {
+        padding-left: 0 !important;
+    }
+    .priority {
+        width: 395px;
+    }
+
+    .addTaskOverlayHeadline {
+        justify-content: space-between;
+    }
+
+    .addTaskOverlayHeadline > h1 {
+        font-size: 32px;
+    }
+
+    /*##### AddTask Form page #####*/
+    #checkboxes,
+    #taskType {
+        max-width: 395px;
+    }
+
+    #addTaskBottom {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1400px) {
+    /*##### board.html #####*/
+    #mainWrapper {
+        padding-left: 40px;
+    }
+
+    /*##### board.html (addTask-Overlay) #####*/
+    #title,
+    textarea,
+    #selectContacts,
+    #selectInputAssignee,
+    #datePicker,
+    #categorySelect,
+    #subtaskStorage,
+    .addTaskEnterSubtask {
+        width: 300px;
+    }
+
+    .priority {
+        width: 300px;
+    }
+
+    .addTaskOverlayHeadline > h1 {
+        font-size: 32px;
+    }
+
+    /*##### AddTask Form page #####*/
+    #checkboxes,
+    #taskType {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 1360px) {
+    #mainWrapper {
+        width: 80%;
+    }
+
+    /*##### AddTask Form page #####*/
+    #checkboxes,
+    #taskType {
+        max-width: 300px !important;
+        font-size: 18px;
+        padding: 4px;
+    }
+
+    #selectContacts {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 1320px) {
+    section#sidebar,
+    section#sidebarNoUser {
+        display: none !important;
+    }
+    /*##### START Just Mobile Menu #####*/
+    .responsive-mobile-menu {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #2A3647;
+        padding: 0 16px;
+    }
+
+    .mobileMenu-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .mobileMenu-wrapper > a {
+        width: 76px;
+        height: 76px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mobileMenu-wrapper > a > p {
+        font-size: 14px !important;
+        color: white !important;
+        white-space: nowrap !important;
+    }
+    /*##### END Just Mobile Menu #####*/
+
+    .mobileMenu-wrapper > a {
+        filter: brightness(1.5) !important;
+    }
+
+    /*##### add_task.html #####*/
+    #addTaskMainWrapper {
+        align-items: center;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    /*##### index.html (dashboard) #####*/
+    .welcome-text {
+        display: none;
+    }
+
+    /*##### AddContact Overlay #####*/
+    .contactOverlayWrapper {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .contactOverlayLeft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 365px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 0;
+        padding-left: 0 !important;
+    }
+
+    .contactOverlayRight {
+        width: 100%;
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+        padding: 40px !important;
+    }
+
+    #createNewContactForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: -100px;
+    }
+
+    #addContactFormAvatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .addContactForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 0 !important;
+    }
+
+    .spaceDivContacts {
+        display: none;
+    }
+
+    #contactOverlayRight > div.close {
+        display: none;
+    }
+
+    .close-white {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        margin: -130px 16px 119px 0;
+    }
+
+    .contactJoinLogo {
+        display: none;
+    }
+
+    .contactWrapperTop,
+    .contactWrapperBottom {
+        width: 100%;
+    }
+
+    .contactWrapperTop {
+        background-color: #2A3647;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: 352px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+    .contactWrapperBottom {
+        height: 408px;
+        margin-bottom: 20px;
+    }
+
+    .addContactFormAvatarMobile {
+        margin-top: -67px;
+    }
+
+    .addContactFormAvatarMobile,
+    .addContactFormMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    .contactOverlayMobileTop {
+        margin-bottom: 130px;
+        color: #ffffff;
+    }
+
+    .contactOverlayLeftMobile > img {
+        margin: 16px 0 24px 0;
+    }
+
+    .contactOverlayLeft > h1 {
+        font-size: 32px;
+    }
+
+    .contactOverlayRight {
+        padding: 10px;
+        border-radius: 30px;
+    }
+
+    .close {
+        height: 40px;
+        margin: 16px 16px 0 0;
+    }
+
+    .addContactFormAvatar {
+        width: 85%;
+    }
+
+    .avatar {
+        margin-bottom: 20px;
+    }
+
+    .addContactForm {
+        margin-left: 32px;
+    }
+
+    .createContact {
+        margin-right: 0 !important;
+    }
+
+    .createContactButton > * {
+        width: 197px !important;
+    }
+
+    .contactOverlayWrapperMobile {
+        display: flex !important;
+    }
+
+    #index-centerBox {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cancelContactEdit {
+
+    }
+
+    .white-cancel {
+        display: block !important;
+    }
+}
+
+@media (max-width: 1170px) {
+    /*##### board.html #####*/
+    .centerWrapperHeadline > div#main {
+        flex-direction: column !important;
+    }
+
+    .centerWrapperHeadline {
+        margin: 0 !important;
+    }
+
+    .mainAddTaskSite {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 1120px) {
+    #mainWrapper {
+        width: 100%;
+        padding: 0 0 0 24px !important;
+    }
+
+    #main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*##### Addtask.html #####*/
+    .divider {
+        margin: 0 0 24px 0!important;
+    }
+
+    #outerTaskOverlayWrapper {
+        width: 85vw !important;
+    }
+
+}
+
+@media (max-width: 1072px) {
+    p#categoryTitle {
+        font-size: 14px;
+    }
+
+    .board-subtitle {
+        font-size: 18px !important;
+    }
+}

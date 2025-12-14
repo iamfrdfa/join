@@ -1,0 +1,344 @@
+/*##### START OF Add-task section #####*/
+#addTaskMainWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 5%;
+}
+.centerWrapperHeadline {
+    margin: 48px 0 48px 0;
+}
+
+select#selectInputAssignee,
+select#categorySelect {
+    box-sizing: inherit;
+    font-size: 16px;
+}
+
+select {
+    -webkit-appearance: button-bevel;
+    appearance: none;
+}
+
+#dropDownArrowContacts,
+#dropDownCategory {
+    position: relative;
+}
+
+#dropDownArrowContacts::after,
+#dropDownCategory::after {
+    content: url('../img/icons/arrow_drop_down.svg');
+    font-size: 2rem;
+    top: -3px;
+    right: 18px;
+    color: #000;
+    height: 24px;
+    position: absolute;
+    z-index: 100;
+}
+
+.addedContacts {
+    background-color: #2A3647;
+    border-radius: 12px;
+}
+
+#selectInputAssignee::placeholder {
+    font-size: 18px;
+}
+
+#title,
+textarea,
+#selectInputAssignee,
+#datePicker,
+#categorySelect,
+.addTaskEnterSubtask {
+    width: 428px;
+    height: 48px;
+    padding: 12px 5px 12px 8px !important;
+    border: 1px solid lightgray !important;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.addTaskEnterSubtask {
+    padding: 8px 0 12px 16px !important;
+}
+
+textarea {
+    resize: none;
+}
+
+#description {
+    height: 120px !important;
+}
+
+#subtasks {
+    border: none !important;
+    width: 100%;
+    line-height: 24px;
+}
+
+#subtasks:focus {
+    outline: none !important;
+}
+
+.innerTaskOverlayWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addTaskBottom {
+    width: 100% !important;
+}
+
+.addTaskWrapperLeft {
+    margin-right: 48px;
+}
+
+.addTaskWrapperRight {
+    margin-left: 48px;
+}
+
+.addTaskWrapperLeft > div {
+    margin-bottom: -12px;
+}
+
+.addTaskWrapperRight > div {
+    margin-bottom: 24px;
+}
+
+.addTaskPrioLow {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/icons/low_icon.png);
+}
+
+.addTaskPrioMedium {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/icons/medium-colored-icon.png);
+}
+
+.addTaskPrioUrgent {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/icons/urgent_icon.png);
+}
+
+.addTaskPrioLowActive {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/icons/low_with_icon.png);
+}
+
+.addTaskPrioMediumActive {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/icons/medium_icon.png);
+}
+
+.addTaskPrioUrgentActive {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/icons/urgent_with_icon.png);
+}
+
+.addTaskAdd {
+    background-image: url(../img/icons/add.svg);
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+}
+
+#addTaskAddSubtaskButton {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+.addTaskSubtask {
+    border-right: none !important;
+}
+
+.addTaskEnterSubtask {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px #A8A8A8;
+}
+
+#subtaskStorage {
+    list-style-type:none;
+    max-height: 96px;
+    overflow-y: auto !important;
+}
+
+.addTaskSubtaskShow {
+    width: 100%;
+    height: auto !important;
+    padding: 6px 16px 6px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.addTaskSubtaskShow:hover {
+    background-color: #E7E7E7;
+}
+
+#subTaskButton {
+    gap: 8px !important;
+}
+
+.addTaskSubtaskShow:hover .addTaskSubtaskEdit {
+    background-image: url(../img/icons/edit_icon.png) !important;
+}
+
+.addTaskSubtaskEdit:hover {
+    background-color: #EEEEEE !important;
+}
+
+.addTaskSubtaskEdit {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.addTaskSubtaskShow:hover .addTaskSubtaskVertikalLine {
+    height: 24px;
+    width: 1px;
+    background-color: #A8A8A8;
+}
+
+.addTaskSubtaskShow:hover .addTaskSubtaskWaste {
+    background-image: url(../img/icons/delete_icon.png) !important;
+}
+
+.addTaskSubtaskWaste:hover {
+    background-color: #EEEEEE !important;
+}
+
+.addTaskSubtaskWaste {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.priorityButton {
+    width: 136px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+    font-size: 19px;
+    margin-right: 8px;
+}
+
+.priorityButtonActive {
+    width: 136px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    font-size: 19px;
+    margin-right: 8px;
+    background: #FFA800 !important;
+    color: #ffffff;
+}
+
+.priorityButtonActive:hover {
+    background: #FFA800 !important;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    color: #000000 !important;
+}
+
+button.priorityButton:hover {
+    background-color: #ffffff !important;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+}
+
+button.priorityButton:active {
+    background: #FFA800 !important;
+    color: #ffffff;
+}
+
+button.priorityButton:active .addTaskPrioLow {
+    background-image: url(../img/icons/low_with_icon.png);
+}
+
+button.priorityButton:active .addTaskPrioMedium {
+    background-image: url(../img/icons/medium_icon.png);
+}
+
+button.priorityButton:active .addTaskPrioUrgent {
+    background-image: url(../img/icons/urgent_with_icon.png);
+}
+
+.priorityImg {
+    height: 14px;
+    width: 20px;
+    padding: 0;
+    margin-left: 8px;
+}
+
+#addTaskBottom {
+    width: 95% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 100px 0;
+}
+
+#createTaskButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button#clear,
+button#create {
+    width: 110px;
+    height: 50px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 19px;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button#create {
+    width: 183px;
+    background: #2A3647;
+    color: #ffffff;
+}
+
+#createTaskButton > button:first-of-type {
+    margin-right: 16px;
+}
+
+.createTaskButtonImg {
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+}
+
+select {
+    width: 480px;
+}
+/*##### END OF Add-task section #####*/
