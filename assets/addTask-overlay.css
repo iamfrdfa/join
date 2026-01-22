@@ -27,6 +27,7 @@
     padding: 50px;
     border-radius: 40px;
     position: relative;
+    overflow-y: auto;
 }
 
 .outerTaskOverlayWrapper > * {
