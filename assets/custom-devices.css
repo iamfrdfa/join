@@ -313,7 +313,7 @@
     .createContactButton { margin-left: 0 !important; }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     #email { height: calc(-30px); }
 
     /*##### index.html (dashboard) #####*/

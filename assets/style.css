@@ -58,6 +58,7 @@ img {
     display: flex;
     padding-left: 48px;
     font-size: 18px;
+    line-height: 36px;
 }
 
 #bodyWrapper {

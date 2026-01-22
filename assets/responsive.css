@@ -1,4 +1,4 @@
-@media (max-width: 1530px) {
+@media (max-width: 1590px) {
     /*##### board.html (addTask-Overlay) #####*/
     .addTaskWrapperLeft {
         margin-right: 24px;
@@ -359,11 +359,6 @@
     .divider {
         margin: 0 0 24px 0!important;
     }
-
-    #outerTaskOverlayWrapper {
-        width: 85vw !important;
-    }
-
 }
 
 @media (max-width: 1072px) {
