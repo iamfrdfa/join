@@ -3,9 +3,6 @@ let countOnToDo = 0;
 let countOnInProgress = 0;
 let countOnAwaitFeedback = 0;
 let countOnDone = 0;
-let subtaskCount = 0;
-let subtaskCountInProzent = 0;
-let subtaskCountProvement = 0;
 /**
  * allows dropping
  */
@@ -205,11 +202,11 @@ function findeTask(value) {
  * lässt den gefundenen task rendern und lässt die vorhandenen Kontakte reinrendern
  */
 function renderFindeTask(element, taskId, contacts) {
-    let subtask = subtaskExist(element);
+    let subtaskInfo = subtaskExist(element);
     let categoryText = categoryFinder(element);
     countForNoTask(element.position);
     let i = 0;
-    renderTask(element, taskId, subtask, categoryText);
+    renderTask(element, taskId, subtaskInfo, categoryText);
     for (let contact in element.selectContacts) {
         let activeContactId = element.selectContacts[contact];
         let activeContact = contacts[activeContactId];
@@ -219,7 +216,6 @@ function renderFindeTask(element, taskId, contacts) {
     if (i>=5){
         renderActiveContactsRest(i,taskId)
     }
-    subtaskCount = 0;
 }
 
 /**
@@ -302,35 +298,50 @@ async function renderAllTasks() {
 
 /**
  * @function subtaskExist()
- * kontrolliert, ob ein oder mehrere subtasks vorhanden sind und rendert die progressbar oder läst sie verschwinden
+ * kontrolliert, ob ein oder mehrere subtasks vorhanden sind und gibt die css-klasse für die progressbar
+ * zusammen mit den gezählten subtask-zahlen zurück, statt sie in globalen variablen zu speichern
  */
 function subtaskExist(task) {
     let subtask = " ";
+    let subtaskNumbers = {
+        subtaskCount: 0,
+        subtaskCountProvement: 0,
+        subtaskCountInProzent: 0
+    };
     let testingSubtask = task.subtasks;
     if (typeof testingSubtask !== 'undefined' && testingSubtask) {
-        subtaskCounter(task);
+        subtaskNumbers = subtaskCounter(task);
     } else {
         subtask = "d-none";
     }
-    return subtask;
+    return {
+        subtask: subtask,
+        subtaskNumbers: subtaskNumbers
+    };
 }
 
 /**
  * @function subtaskCounter()
  * zählt die subtasks und berechnet wie viel prozent davon erledigt sind
+ * und gibt die zahlen als objekt zurück, damit renderTask() sie direkt übergeben bekommt
  */
 function subtaskCounter(task) {
     let subtask = task.subtasks;
     subtaskProofments = task.subtask;
-    subtaskCount = 0;
-    subtaskCountProvement = 0;
+    let subtaskCount = 0;
+    let subtaskCountProvement = 0;
     for (let i=0; i<subtask.length; i++) {
         if (subtaskProofments[i] === 'true') {
             subtaskCountProvement = subtaskCountProvement+1;
         }
         subtaskCount++;
     }
-    subtaskCountInProzent = 100 / subtaskCount * subtaskCountProvement;
+    let subtaskCountInProzent = 100 / subtaskCount * subtaskCountProvement;
+    return {
+        subtaskCount: subtaskCount,
+        subtaskCountProvement: subtaskCountProvement,
+        subtaskCountInProzent: subtaskCountInProzent
+    };
 }
 
 /**

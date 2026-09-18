@@ -23,7 +23,7 @@ function renderActiveContactsRest(i,taskId){
  * @function renderTask()
  * rendert eine task karte in die richtige progress spalte
  */
-function renderTask(task, taskId, subtask, categoryText) {
+function renderTask(task, taskId, subtaskInfo, categoryText) {
     document.getElementById(task.position).innerHTML += /*html*/`
         <div id="taskID_${taskId}" onclick="openTaskOverlay('${taskId}')" ondragstart="drag('${taskId}')" draggable="true" class="d-flex board-task-card flex-column hoverRotation">
             <div class="d-flex align-items-center justify-content-between">
@@ -39,13 +39,13 @@ function renderTask(task, taskId, subtask, categoryText) {
             <div>
                 <p class="board-description">${task.description}</p>
             </div>
-            <div class="d-flex align-items-center gap-10 ${subtask}" id="board-done-progressbar">
+            <div class="d-flex align-items-center gap-10 ${subtaskInfo.subtask}" id="board-done-progressbar">
                 <div class="board-progressbar-full rounded-8">
-                    <div class="board-progressbar rounded-8" style="width: ${subtaskCountInProzent}%;">
+                    <div class="board-progressbar rounded-8" style="width: ${subtaskInfo.subtaskNumbers.subtaskCountInProzent}%;">
                     </div>
                 </div>
                 <div class="d-flex board-subtasks gap-4">
-                  <p> ${subtaskCountProvement}/${subtaskCount}</p>
+                  <p> ${subtaskInfo.subtaskNumbers.subtaskCountProvement}/${subtaskInfo.subtaskNumbers.subtaskCount}</p>
                   <p>Subtasks</p>
                 </div>
             </div>
